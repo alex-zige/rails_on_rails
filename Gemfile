@@ -47,6 +47,8 @@ gem "paperclip", "~> 4.2"
 #for storing paperclip files on Amazon S3
 gem 'aws-sdk', '1.64'
 
+#---- Optional Gems ---
+#
 # User for Parse
 # gem "parse-ruby-client"
 
@@ -73,6 +75,7 @@ group :development do
   gem 'foreman'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem "letter_opener"
 end
 
 group :test do
