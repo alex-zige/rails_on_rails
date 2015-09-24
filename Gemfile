@@ -47,6 +47,9 @@ gem "paperclip", "~> 4.2"
 #for storing paperclip files on Amazon S3
 gem 'aws-sdk', '1.64'
 
+# User for Parse
+# gem "parse-ruby-client"
+
 # Use for enable CORS
 #gem 'rack-cors'
 
