@@ -44,6 +44,9 @@ gem 'kaminari'
 # Storing images/videos/files
 gem "paperclip", "~> 4.2"
 
+#for storing paperclip files on Amazon S3
+gem 'aws-sdk', '1.64'
+
 # Use for enable CORS
 #gem 'rack-cors'
 
