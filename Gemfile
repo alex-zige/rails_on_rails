@@ -45,8 +45,11 @@ gem 'kaminari'
 # Storing images/videos/files
 gem "paperclip", "~> 4.2"
 
-#for storing paperclip files on Amazon S3
+# For storing paperclip files on Amazon S3
 gem 'aws-sdk', '1.64'
+
+# DataBase seed
+gem 'seed-fu', '~> 2.3'
 
 #---- Optional Gems ---
 #
