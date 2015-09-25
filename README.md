@@ -1,21 +1,39 @@
+# Getting start
+
+##Clone project
+
+```
+git clone git@github.com:TouchtechLtd/rails_on_rails.git
+
+```
+
+##Rename project
+
+
+
+# Usage
+
 # Setup
+
 
 ## Database
 
 Requires MySQL (5.6) to be installed and running.
 
-notes: if the app is requires mb4_utf8 encoding, plesae enable
+note: if your app requires mb4_utf8 encoding, please modify the following:
 
-``
-  config/database.yml
-  > encoding: utf8mb4
-  > collation: utf8mb4_unicode_ci
-``
+```
+
+  #config/database.yml
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
+
+```
 
 and ``config/initializers/mysql_utf8mb4.rb``
 
 
-## App
+## Environment Variables
 
 Make a copy of the file `.env.sample` called `.env`
 
@@ -37,7 +55,7 @@ run the rake task (which takes quite some time)
 To deploy with the command line, you can use the leapingtiger:deploy rake task:
 
 ```
-rake 'leapingtiger:deploy[leaping-tiger-staging,true]'
+rake 'leapingtiger:deploy[rails-on-rails,true]'
 ```
 
 Parameter 1 is the stack name (defaults to 'rails-on-rails-staging')
