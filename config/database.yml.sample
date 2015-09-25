@@ -1,0 +1,26 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
+  pool: 5
+  timeout: 5000
+  socket: /tmp/mysql.sock
+  username: root
+  password:
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: rails_on_rails_dev
+
+staging:
+  <<: *default
+  database: rails_on_rails_staging
+
+test:
+  <<: *default
+  database: rails_on_rails_test
+
+
+
