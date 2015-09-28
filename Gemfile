@@ -51,13 +51,16 @@ gem 'aws-sdk', '1.64'
 # DataBase seed
 gem 'seed-fu', '~> 2.3'
 
+# Rename
+gem 'rename'
+
 #---- Optional Gems ---
 #
 # User for Parse
 # gem "parse-ruby-client"
 
 # Use for enable CORS
-#gem 'rack-cors'
+# gem 'rack-cors'
 
 group :development, :test do
   gem 'rspec-rails'
