@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  api:
+    errors:
+      invalid_login: The email and password combination is not correct.
+

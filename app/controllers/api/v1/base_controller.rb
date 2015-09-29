@@ -1,11 +1,10 @@
 class Api::V1::BaseController < ApplicationController
 
   include ErrorHandling
+
   before_action :check_deliberate_error
 
   before_action :authenticate_user_from_token!
-
-  before_action :intercom_update
 
   skip_before_action :verify_authenticity_token
 
@@ -32,7 +31,7 @@ class Api::V1::BaseController < ApplicationController
   end
 
   def authenticate_user_from_token!
-    user_token = request.headers['HTTP_TOKEN']
+    user_token = request.headers['authentication_token']
     user_token ||= params[:authentication_token].presence
     @current_user = user_token && User.find_by_authentication_token(user_token)
     raise Exceptions::Unauthorized unless @current_user
