@@ -1,5 +1,19 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  namespace :api do
+    namespace :v1 do
+
+      #Authentication
+      post "sign_up", to: 'registrations#create'
+      post "sign_in", to: 'sessions#create'
+      delete "sign_out", to: 'sessions#destory'
+      post "password/reset", to: 'passwords#create'
+
+      resources :users
+
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
