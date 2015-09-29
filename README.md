@@ -10,7 +10,6 @@ git clone git@github.com:TouchtechLtd/rails_on_rails.git
 ##Rename project
 
 
-
 # Usage
 
 # Setup
@@ -55,7 +54,7 @@ run the rake task (which takes quite some time)
 To deploy with the command line, you can use the leapingtiger:deploy rake task:
 
 ```
-rake 'leapingtiger:deploy[rails-on-rails,true]'
+rake 'rails_on_rails:deploy[rails-on-rails,true]'
 ```
 
 Parameter 1 is the stack name (defaults to 'rails-on-rails-staging')
