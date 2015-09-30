@@ -6,7 +6,7 @@ It includes quite a lot of best practices over the years and tailored for our AW
 ##Clone project
 
 ```
-git clone git@github.com:TouchtechLtd/rails_on_rails.git
+git clone git@github.com:alex-zige/rails_on_rails.git
 
 ```
 ##Config gemset
@@ -47,9 +47,7 @@ test:
 
 ```
 > gem update --system
->
 > gem install bundler
-
 > bundle install
 
 ```
