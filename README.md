@@ -1,6 +1,6 @@
 # Getting start
 
-This project is used at boilerplate for bootstraping rails project.
+This project is used as a boilerplate for bootstrapping rails projects.
 It includes quite a lot of best practices over the years and tailored for our AWS Opswork deployment life cycle.
 
 ##Clone project
