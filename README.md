@@ -158,7 +158,7 @@ run the rake task (which takes quite some time)
 To deploy with the command line, you can use the leapingtiger:deploy rake task:
 
 ```
-rake 'rails_on_rails:deploy[rails-on-rails,true]'
+rake 'your_project_name:deploy['your-project-name-staging',true]'
 ```
 
 Parameter 1 is the stack name (defaults to 'rails-on-rails-staging')
