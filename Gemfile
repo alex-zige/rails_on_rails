@@ -54,6 +54,9 @@ gem 'seed-fu', '~> 2.3'
 # Rename
 gem 'rename'
 
+# JSON Serialization
+gem 'active_model_serializers'
+
 #---- Optional Gems ---
 #
 # User for Parse
