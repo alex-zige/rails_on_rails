@@ -93,6 +93,7 @@ group :test do
   gem 'database_cleaner'
   gem 'json-schema'
   gem 'faker'
+  gem 'json-schema'
   gem 'timecop'
 end
 
