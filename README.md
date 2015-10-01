@@ -1,7 +1,19 @@
-# Getting start
+#Getting started 🚀
 
 This project is used as a boilerplate for bootstrapping rails projects.
 It includes quite a lot of best practices over the years and tailored for our AWS Opswork deployment life cycle.
+
+#What's in it?
+* Base Collection of popular gems and optional gems
+* Base User model with basic authentication
+* Base API structure with error handling
+* Base initializer configurations
+* Base Rspec test suite setup with ``factory_girl``
+* Base JSON schema validator integrated with rspec
+* Best practise to handle env vars
+* Base ``after_restart`` and ``after_migrate`` hook for using AWS Opswork for deployment with Chef
+* Base deploy tasks for deploying via CLI
+* TBC
 
 ##Clone project
 
@@ -65,9 +77,7 @@ Notes: make sure your-project-name is the same with ``.ruby-gemset``. otherwise 
 
 ##Utf8bm4 Database
 
-Requires MySQL (5.6) to be installed and running.
-
-note: if your app requires mb4_utf8 encoding, please modify the following:
+note: if your app requires mb4_utf8 encoding (emoji), please modify the following:
 
 ```
 
@@ -152,7 +162,7 @@ run the rake task (which takes quite some time)
 
     $ rake db:seed_fu
 
-####Command Line Deploys
+## Command Line Deploys
 To deploy with the command line, you can use the leapingtiger:deploy rake task:
 
 ```
