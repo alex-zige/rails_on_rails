@@ -5,7 +5,6 @@ module ErrorHandling
     rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
     rescue_from ActiveRecord::RecordInvalid , with: :invalid_record
     rescue_from ArgumentError, with: :argument_error
-    rescue_from FbGraph::Exception, with: :fb_graph_error
     rescue_from Exceptions::DefaultError, with: :render_error
   end
 
