@@ -4,9 +4,9 @@ module Exceptions
 
   class DefaultError < Error
 
-    def initialize(options={})
-      @http_status = options[:http_status]
-    end
+    # def initialize(options={})
+      # @http_status = options[:http_status]
+    # end
 
     def self.http_status(value = nil)
       @http_status ||= (value.presence && value)

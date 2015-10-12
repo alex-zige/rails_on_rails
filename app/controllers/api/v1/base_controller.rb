@@ -1,6 +1,6 @@
 class Api::V1::BaseController < ApplicationController
 
-  include ErrorHandling
+  include Concerns::ErrorHandling
 
   before_action :check_deliberate_error
 
