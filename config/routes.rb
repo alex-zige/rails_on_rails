@@ -1,17 +1,19 @@
 Rails.application.routes.draw do
+  apipie
   devise_for :users
-
   namespace :api do
     namespace :v1 do
-
       #Authentication
       post "sign_up", to: 'registrations#create'
       post "sign_in", to: 'sessions#create'
-      delete "sign_out", to: 'sessions#destory'
+      delete "sign_out", to: 'sessions#destroy'
       post "password/reset", to: 'passwords#create'
 
-      resources :users
-
+      resources :users do
+        collection do
+          get 'me'
+        end
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
