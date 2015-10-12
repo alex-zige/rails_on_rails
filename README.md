@@ -163,13 +163,13 @@ run the rake task (which takes quite some time)
     $ rake db:seed_fu
 
 ## Command Line Deploys
-To deploy with the command line, you can use the leapingtiger:deploy rake task:
+To deploy with the command line, you can use the your-project-name:deploy rake task:
 
 ```
 rake 'your_project_name:deploy['your-project-name-staging',true]'
 ```
 
-Parameter 1 is the stack name (defaults to 'rails-on-rails-staging')
+Parameter 1 is the stack name (defaults to 'your-project-name-staging')
 
 Parameter 2 is if the deploy will migrate the database (defaults to false)
 
