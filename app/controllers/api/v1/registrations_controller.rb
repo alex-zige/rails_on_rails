@@ -2,37 +2,34 @@ class Api::V1::RegistrationsController < Api::V1::BaseController
 
   skip_before_action :authenticate_user_from_token!, only: [:create]
 
-  #POST /sign_up
-  #Params:
-  #email: string
-  #password: string
+  api :POST, "/v1/sign_up", "Sign up new user with email and password"
+  error :code => 422, :desc => "unprocessable_entity"
+  error :code => 500, :desc => "Server Error"
+  param :email, String, :desc => "user's email", :required => true
+  param :password, String, :desc => "user's password", :required => true
+  param :first_name, String, :desc => "user's first_name", :required => true
+  param :last_name, String, :desc => "user's last_name", :required => true
+  formats ['json']
+  meta :message => "Some very important info"
+  example '{
+    "id": 1,
+    "authentication_token": "JmXq7Mg4ndMhDkSKRrhk",
+    "email": "test@test.com",
+    "first_name": "Augustus",
+    "last_name": "Reilly"
+  }'
   def create
-      @user = User.new(user_params)
-      if @user.save
-        render json: @user, serializer: Api::V1::CurrentUserSerializer
-      else
-        render json: {errors: @user.errors}, status: :unprocessable_entity
-      end
-  end
-
-  # def authenticate
-  #   raise Exceptions::BadRequest unless authentication_params[:token] && authentication_params[:provider]
-  #   user = FbGraph::User.me(authentication_params[:token])
-  #   #Throw FbGraph::InvalidToken unless token is valid
-  #   user = user.fetch
-  #   facebook_uid = user.identifier
-  #   authentication = Authentication.find_by_provider_and_uid(authentication_params[:provider], facebook_uid)
-  #   raise Exceptions::Unauthorized unless authentication.present?
-  #   render json: authentication.user, serializer: Api::V1::CurrentUserSerializer, status: 201
-  # end
-
-  #DELELTE /sign_out
-  def destroy
+    @user = User.new(user_params)
+    if @user.save
+      render json: @user, serializer: Api::V1::CurrentUserSerializer
+    else
+      render json: {error: @user.errors}, status: :unprocessable_entity
+    end
   end
 
   private
   def user_params
-    params.require(:user).permit(:email)
+    params.require(:user).permit(:email, :password, :first_name, :last_name)
   end
 
 end

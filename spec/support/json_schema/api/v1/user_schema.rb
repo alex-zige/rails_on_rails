@@ -5,12 +5,11 @@ module JsonSchema
       def self.user
         {
           type: :object,
-          required: [:id, :first_name, :last_name, :email],
+          required: [:id, :first_name, :last_name],
           properties: {
             id: JsonSchema.integer,
             first_name: JsonSchema.string,
             last_name: JsonSchema.string,
-            email: JsonSchema.string,
             profile_image_url: JsonSchema.string_or_nil
           }
         }
@@ -34,12 +33,11 @@ module JsonSchema
      def self.simple_user
         {
           type: :object,
-          required: [:id, :first_name, :last_name, :email],
+          required: [:id, :first_name, :last_name],
           properties: {
             id: JsonSchema.integer,
             first_name: JsonSchema.string,
             last_name: JsonSchema.string,
-            email: JsonSchema.string,
             profile_image_url: JsonSchema.string_or_nil
           }
         }
