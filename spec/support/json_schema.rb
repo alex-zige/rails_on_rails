@@ -1,4 +1,4 @@
-module JsonSchema
+module JsonSchema  
   def self.string
     { type: :string }
   end
@@ -19,15 +19,16 @@ module JsonSchema
     { type: [:integer, :nil] }
   end
 
+
   def self.datetime
     { type: :string, format: "date-time" }
   end
 
   def self.string_or_nil
     { type: [:string, :nil] }
-  end
+  end 
 
   def self.any
     { type: :any }
   end
-end
+end  
