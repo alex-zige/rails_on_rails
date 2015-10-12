@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/Apipie/apipie-rails.git
+  revision: 4b9bbd30c1233f836851b0303f55adbb93320189
+  specs:
+    apipie-rails (0.3.4)
+      json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -266,6 +273,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  apipie-rails!
   aws-sdk (= 1.64)
   better_errors
   binding_of_caller

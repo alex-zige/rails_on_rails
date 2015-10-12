@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use mysql2 as the database for Active Record
@@ -23,6 +22,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'apipie-rails', :github => 'Apipie/apipie-rails'
+
+# JSON Serialization
+gem 'active_model_serializers'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -51,12 +55,6 @@ gem 'aws-sdk', '1.64'
 # DataBase seed
 gem 'seed-fu', '~> 2.3'
 
-# Rename
-gem 'rename'
-
-# JSON Serialization
-gem 'active_model_serializers'
-
 #---- Optional Gems ---
 #
 # User for Parse
@@ -64,6 +62,9 @@ gem 'active_model_serializers'
 
 # Use for enable CORS
 # gem 'rack-cors'
+
+# Rename - Please delete after renaming
+gem 'rename'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -93,9 +94,5 @@ group :test do
   gem 'database_cleaner'
   gem 'json-schema'
   gem 'faker'
-  gem 'json-schema'
   gem 'timecop'
 end
-
-
-
