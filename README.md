@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alex-zige/rails_on_rails.svg?branch=master)](http://travis-ci.org/alex-zige/rails_on_rails)
+
 #Getting started 🚀
 
 This project is used as a boilerplate for bootstrapping rails projects.
