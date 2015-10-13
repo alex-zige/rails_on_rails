@@ -10,3 +10,6 @@ cript:
   - bundle exec rake db:schema:load
   - bundle exec rake db:test:prepare
   - bundle exec rake spec
+addons:
+  code_climate:
+    repo_token: 68a5e4105eac2482da1f2b5de3b9b8b90a16cbd08d346ac07176bbd8442c8220
