@@ -1,4 +1,12 @@
 language: ruby
 rvm:
   - 2.2.2
-script: bundle exec rspec spec
+env:
+  - RAILS_ENV=test
+before_script:
+  - "mysql -e 'create database rails_on_rails_test;'"
+  - "cp ./.travis.database.yml ./config/database.yml"
+cript:
+  - bundle exec rake db:schema:load
+  - bundle exec rake db:test:prepare
+  - bundle exec rake spec

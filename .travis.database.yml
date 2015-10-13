@@ -1,0 +1,5 @@
+test:
+  adapter: mysql2
+  database: rails_on_rails_test
+  username: root
+  encoding: utf8
