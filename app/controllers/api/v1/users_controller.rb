@@ -28,6 +28,7 @@ class Api::V1::UsersController < Api::V1::BaseController
   formats ['json']
   example '{
     "id": 1,
+    "email": "test@gmail.com",
     "authentication_token": "JmXq7Mg4ndMhDkSKRrhk",
     "first_name": "Augustus",
     "last_name": "Reilly",
