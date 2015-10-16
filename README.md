@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/alex-zige/rails_on_rails.svg?branch=master)](http://travis-ci.org/alex-zige/rails_on_rails)
 [![Code Climate](https://codeclimate.com/github/alex-zige/rails_on_rails/badges/gpa.svg)](https://codeclimate.com/github/alex-zige/rails_on_rails)
 [![Test Coverage](https://codeclimate.com/github/alex-zige/rails_on_rails/badges/coverage.svg)](https://codeclimate.com/github/alex-zige/rails_on_rails/coverage)
+[![Jion Chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/alex-zige/rails_on_rails)
 
 #Getting started 🚀
 
