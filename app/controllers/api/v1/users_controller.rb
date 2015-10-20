@@ -5,12 +5,10 @@ class Api::V1::UsersController < Api::V1::BaseController
   error :code => 404, :desc => "Not Found"
   formats ['json']
   example '{
-  "user":{
-      "id": 1,
-      "first_name": "Augustus",
-      "last_name": "Reilly",
-      "profile_image_url" : "https://....",
-    }
+    "id": 1,
+    "first_name": "Augustus",
+    "last_name": "Reilly",
+    "profile_image_url" : "https://....",
   }'
   def show
     @user = User.find_by_id(params[:id])
