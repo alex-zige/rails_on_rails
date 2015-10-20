@@ -182,7 +182,7 @@ Parameter 2 is if the deploy will migrate the database (defaults to false)
 #Caveat
 If you are using AWS Opswork Stack, please in your Rails App Layer, specifiy the bundler version to be ``1.10.6`` or above and the change will be applied after a new deployment.
 
-By default AWS Rails App layer using the out of dated version ``bundler 1.5.3`` that you likely to run into ``SystemStackError: stack level too deep`` Errors.
+By default AWS Rails App layer using the out of dated version ``bundler 1.5.3`` that you would be more likely to run into ``SystemStackError: stack level too deep`` error.
 
 
 ##API Spec
