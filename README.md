@@ -185,6 +185,20 @@ If you are using AWS Opswork Stack, please in your Rails App Layer, specifiy the
 By default AWS Rails App layer using the out of dated version ``bundler 1.5.3`` that you would be more likely to run into ``SystemStackError: stack level too deep`` error.
 
 
+#Authentication
+
+There are open two ways of authentications against the server.
+
+Authentication Token (Sent as a parameter)
+
+You can access the server with URL appended with Access Token
+
+`` $ curl https://xxx/api/v1/users/?authentication_token=AUTHENTICATION-TOKEN``
+
+Authentication Token (Sent in a header)
+
+`` $ curl -H "Authorization:AUTHENTICATION_TOKEN" https://xxx/api/v1/users``
+
 ##API Spec
 
 [API references]
