@@ -46,7 +46,7 @@ module JsonSchema
      def self.simple_users
         {
           type: :array,
-          item: simple_user
+          items: simple_user
         }
       end
     end
