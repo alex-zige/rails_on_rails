@@ -31,7 +31,7 @@ class Api::V1::BaseController < ApplicationController
   end
 
   def authenticate_user_from_token!
-    user_token = request.headers['HTTP_AUTHENTICATION_TOKEN']
+    user_token = request.headers['HTTP_AUTHORIZATION']
     user_token ||= params[:authentication_token].presence
     @current_user = user_token && User.find_by_authentication_token(user_token)
     raise Exceptions::Unauthorized unless @current_user
