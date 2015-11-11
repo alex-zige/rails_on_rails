@@ -19,10 +19,12 @@ class Api::V1::UsersController < Api::V1::BaseController
   api :PUT, "/v1/users/:id", "Return the current user info."
   error :code => 401, :desc => "Unauthorized"
   error :code => 403, :desc => "Forbidden"
-  param :first_name, String, :desc => "user's first_name", :required => false
-  param :last_name, String, :desc => "user's last_name", :required => false
-  param :company_name, String, :desc => "user's company_name", :required => false
-  param :profile_image_data, String, :desc => "user's company_name (Base64 encoded string)", :required => false
+  param :user, Hash, :desc => "User" do
+    param :first_name, String, :desc => "user's first_name", :required => false
+    param :last_name, String, :desc => "user's last_name", :required => false
+    param :company_name, String, :desc => "user's company_name", :required => false
+    param :profile_image_data, String, :desc => "user's company_name (Base64 encoded string)", :required => false
+  end
   formats ['json']
   example '{
     "id": 1,

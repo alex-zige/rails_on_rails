@@ -2,10 +2,12 @@ class Api::V1::PasswordsController < Api::V1::BaseController
 
   skip_before_action :authenticate_user_from_token!, only: [:create]
 
-  api :POST, "/v1/passwords/reset", "Send user the reset password email"
+  api :POST, "/v1/password/reset", "Send user the reset password email"
   error :code => 422, :desc => "Unprocessable Entity"
   error :code => 500, :desc => "Server Error"
-  param :email, String, :desc => "user's email", :required => true
+  param :user, Hash, :desc => "User" do
+   param :email, String, :desc => "user's email", :required => true
+  end
   formats ['json']
 
   def create
