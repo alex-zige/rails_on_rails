@@ -6,8 +6,10 @@ class Api::V1::SessionsController < Api::V1::BaseController
   error :code => 401, :desc => "Unauthorized"
   error :code => 422, :desc => "Unprocessable Entity"
   error :code => 500, :desc => "Server Error"
-  param :email, String, :desc => "user's email", :required => true
-  param :password, String, :desc => "user's password", :required => true
+  param :user, Hash, :desc => "User" do
+    param :email, String, :desc => "user's email", :required => true
+    param :password, String, :desc => "user's password", :required => true
+  end
   formats ['json']
   example '{
     "id": 1,
