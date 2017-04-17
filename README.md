@@ -26,14 +26,6 @@ It includes quite a lot of best practices over the years and tailored for our AW
 git clone git@github.com:alex-zige/rails_on_rails.git
 
 ```
-##Config gemset
-
-Modify ``.ruby-gemset`` change ``rails_on_rails`` to your project
-
-```
-your-project-name
-
-```
 
 ##Config database
 ```
